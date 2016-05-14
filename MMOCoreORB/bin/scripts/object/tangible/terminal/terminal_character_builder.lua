@@ -724,12 +724,51 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 						"Melee Speed IV", "force_sensitive_combat_prowess_melee_speed_04"
 					},
 					"Master", "force_sensitive_combat_prowess_master"
+				},
+				"Image Designer",
+				{
+					"Novice", "social_imagedesigner_novice",
+					"Hairstyling",
+					{
+						"Hairstyling I", "social_imagedesigner_hairstyle_01",
+						"Hairstyling II", "social_imagedesigner_hairstyle_02",
+						"Hairstyling III", "social_imagedesigner_hairstyle_03",
+						"Hairstyling IV", "social_imagedesigner_hairstyle_04"
+					},
+					"Face",
+					{
+						"Face I", "social_imagedesigner_exotic_01",
+						"Face II", "social_imagedesigner_exotic_02",
+						"Face III", "social_imagedesigner_exotic_03",
+						"Face IV", "social_imagedesigner_exotic_04"
+					},
+					"Bodyform",
+					{
+						"Bodyform I", "social_imagedesigner_bodyform_01",
+						"Bodyform II", "social_imagedesigner_bodyform_02",
+						"Bodyform III", "social_imagedesigner_bodyform_03",
+						"Bodyform Iv", "social_imagedesigner_bodyform_04"
+					},
+					"Markings",
+					{
+						"Markings I", "social_imagedesigner_markings_01",
+						"Markings II", "social_imagedesigner_markings_02",
+						"Markings III", "social_imagedesigner_markings_03",
+						"Markings IV", "social_imagedesigner_markings_04"
+					},
+					"Master", "social_imagedesigner_master"
 					}
 				},
 				"Jedi",
 				{
 					"Rank",
 					{
+						"Base",
+						{
+							"Force Sensitive", "force_title_jedi_novice",
+							"Initiate", "force_title_jedi_rank_01",
+							"Padawan", "force_title_jedi_rank_02"
+						},
 						"Jedi Dark Rank",
 						{
 							"Rank Member", "force_rank_dark_novice",
@@ -1531,18 +1570,30 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			--},
 			"Armor",
 			{
-			--	"Bone Armor",
-			--	{
-			--		"Bone Left Bicep", "object/tangible/wearables/armor/bone/armor_bone_s01_bicep_l.iff",
-			--		"Bone Right Bicep", "object/tangible/wearables/armor/bone/armor_bone_s01_bicep_r.iff",
-			--		"Bone Boots", "object/tangible/wearables/armor/bone/armor_bone_s01_boots.iff",
-			--		"Bone Left Bracer", "object/tangible/wearables/armor/bone/armor_bone_s01_bracer_l.iff",
-			--		"Bone Right Bracer", "object/tangible/wearables/armor/bone/armor_bone_s01_bracer_r.iff",
-			--		"Bone Chest Plate", "object/tangible/wearables/armor/bone/armor_bone_s01_chest_plate.iff",
-			--		"Bone Gloves", "object/tangible/wearables/armor/bone/armor_bone_s01_gloves.iff",
-			--		"Bone Helmet", "object/tangible/wearables/armor/bone/armor_bone_s01_helmet.iff",
-			--		"Bone Leggings", "object/tangible/wearables/armor/bone/armor_bone_s01_leggings.iff"
-			--	},
+				"Bone Armor",
+				{
+					"Bone Left Bicep", "object/tangible/wearables/armor/bone/armor_bone_s01_bicep_l.iff",
+					"Bone Right Bicep", "object/tangible/wearables/armor/bone/armor_bone_s01_bicep_r.iff",
+					"Bone Boots", "object/tangible/wearables/armor/bone/armor_bone_s01_boots.iff",
+					"Bone Left Bracer", "object/tangible/wearables/armor/bone/armor_bone_s01_bracer_l.iff",
+					"Bone Right Bracer", "object/tangible/wearables/armor/bone/armor_bone_s01_bracer_r.iff",
+					"Bone Chest Plate", "object/tangible/wearables/armor/bone/armor_bone_s01_chest_plate.iff",
+					"Bone Gloves", "object/tangible/wearables/armor/bone/armor_bone_s01_gloves.iff",
+					"Bone Helmet", "object/tangible/wearables/armor/bone/armor_bone_s01_helmet.iff",
+					"Bone Leggings", "object/tangible/wearables/armor/bone/armor_bone_s01_leggings.iff"
+				},
+				"Deathtrooper Armor",
+				{
+					"Deathtrooper Left Bicep", "object/tangible/wearables/armor/deathtrooper/armor_deathtrooper_advanced_bicep_l.iff",
+					"Deathtrooper Right Bicep", "object/tangible/wearables/armor/deathtrooper/armor_deathtrooper_advanced_bicep_r.iff",
+					"Deathtrooper Boots", "object/tangible/wearables/armor/deathtrooper/armor_deathtrooper_advanced_boots.iff",
+					"Deathtrooper Left Bracer", "object/tangible/wearables/armor/deathtrooper/armor_deathtrooper_advanced_bracer_l.iff",
+					"Deathtrooper Right Bracer", "object/tangible/wearables/armor/deathtrooper/armor_deathtrooper_advanced_bracer_r.iff",
+					"Deathtrooper Chest Plate", "object/tangible/wearables/armor/deathtrooper/armor_deathtrooper_advanced_chest_plate.iff",
+					"Deathtrooper Gloves", "object/tangible/wearables/armor/deathtrooper/armor_deathtrooper_advanced_gloves.iff",
+					"Deathtrooper Helmet", "object/tangible/wearables/armor/deathtrooper/armor_deathtrooper_advanced_helmet.iff",
+					"Deathtrooper Leggings", "object/tangible/wearables/armor/deathtrooper/armor_deathtrooper_advanced_leggings.iff"
+				},
 				"Ithorian Armor",
 				{
 					"Ithorian Sentinel",
@@ -1918,17 +1969,27 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 						"Bespin House Deed", "object/tangible/deed/player_house_deed/bespin_house_deed.iff",
 						"Commando House Deed", "object/tangible/deed/player_house_deed/commando_house_deed.iff",
 						"Emperor's House Deed", "object/tangible/deed/player_house_deed/emperors_house_deed.iff",
+						"Generic Large Windowed Style 1 Deed", "object/tangible/deed/player_house_deed/generic_large_window_s01_deed.iff",
+						"Generic Large Windowed Style 2 Deed", "object/tangible/deed/player_house_deed/generic_large_window_s02_deed.iff",
+						"Generic Medium Windowed Style 1 Deed", "object/tangible/deed/player_house_deed/generic_medium_window_s01_deed.iff",
+						"Generic Medium Windowed Style 2 Deed", "object/tangible/deed/player_house_deed/generic_medium_window_s02_deed.iff",
+						"Generic Small Windowed Style 1 Deed", "object/tangible/deed/player_house_deed/generic_small_window_s01_deed.iff",
+						"Generic Small Windowed Style 2 Deed", "object/tangible/deed/player_house_deed/generic_small_window_s02_deed.iff",
 						"Hangar House Deed", "object/tangible/deed/player_house_deed/hangar_house_deed.iff",
 						"Jabba's House Deed", "object/tangible/deed/player_house_deed/jabbas_house_deed.iff",
 						"Jedi House Deed", "object/tangible/deed/player_house_deed/jedi_house_deed.iff",
 						"Musty House Deed", "object/tangible/deed/player_house_deed/musty_house_deed.iff",
+						"Naboo Small Windowed Style 1 Deed", "object/tangible/deed/player_house_deed/musty_house_deed.iff",
+						"Nightsister Hut House Deed", "object/tangible/deed/player_house_deed/ns_hut_deed.iff",
 						"Rebel House Deed", "object/tangible/deed/player_house_deed/rebel_house_deed.iff",
 						"Relaxation House Deed", "object/tangible/deed/player_house_deed/relaxation_house_deed.iff",
 						"Sandcrawler House Deed", "object/tangible/deed/player_house_deed/sandcrawler_house_deed.iff",
 						"Sith House Deed", "object/tangible/deed/player_house_deed/sith_house_deed.iff",
+						"Singing Mountain Clan Hut House Deed", "object/tangible/deed/player_house_deed/sm_hut_deed.iff",
+						"Tatooine Small Windowed Style 1 House Deed", "object/tangible/deed/player_house_deed/musty_house_deed.iff",
 						"Tree House Deed", "object/tangible/deed/player_house_deed/tree_house_deed.iff",
 						"Vehicle House Deed", "object/tangible/deed/player_house_deed/vehicle_house_deed.iff",
-						"VIP  Bunker House Deed", "object/tangible/deed/player_house_deed/vipbunker_house_deed.iff",
+						"VIP Bunker House Deed", "object/tangible/deed/player_house_deed/vipbunker_house_deed.iff",
 						"Yoda's House Deed", "object/tangible/deed/player_house_deed/yoda_house_deed.iff",
 						"YT-1300 House Deed", "object/tangible/deed/player_house_deed/yt1300_house_deed.iff"
 					},
@@ -2918,6 +2979,36 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Carbine",
 					{
 						"Mandalorian Carbine", "object/weapon/ranged/carbine/carbine_mandalorian.iff",
+						"Alliance Needler Carbine", "object/weapon/ranged/carbine/carbine_alliance_needler.iff",
+						"Avatar Trando Carbine", "object/weapon/ranged/carbine/carbine_avatar_trando.iff",
+						"Avatar Trando E5 Carbine", "object/weapon/ranged/carbine/carbine_avatar_trando_e5.iff",
+						"Bothan Bola Carbine", "object/weapon/ranged/carbine/carbine_bothan_bola.iff",
+						"Bothan Bola Generic Carbine", "object/weapon/ranged/carbine/carbine_bothan_bola_generic.iff",
+						"Bounty EE3 Carbine", "object/weapon/ranged/carbine/carbine_bounty_ee3.iff",
+						"CDEF NPE Carbine", "object/weapon/ranged/carbine/carbine_cdef_npe.iff",
+						"Charric Carbine", "object/weapon/ranged/carbine/carbine_charric.iff",
+						"Czerka Dart Carbine", "object/weapon/ranged/carbine/carbine_czerka_dart.iff",
+						"DC15 Carbine", "object/weapon/ranged/carbine/ep3/carbine_dc15.iff",
+						"DH17 Black NPE Carbine", "object/weapon/ranged/carbine/carbine_dh17_black_npe.iff",
+						"DH17 Snubnose NPE Carbine", "object/weapon/ranged/carbine/carbine_dh17_snubnose_npe.iff",
+						"E5 Carbine", "object/weapon/ranged/carbine/carbine_e5.iff",
+						"E5 Generic Carbine", "object/weapon/ranged/carbine/carbine_e5_generic.iff",
+						"E5 Legendary Carbine", "object/weapon/ranged/carbine/carbine_e5_legend.iff",
+						"E11 Mark II Carbine", "object/weapon/ranged/carbine/carbine_e11_mark2.iff",
+						"E11 Static Carbine", "object/weapon/ranged/carbine/carbine_e11_static.iff",
+						"Geonosian Carbine", "object/weapon/ranged/carbine/carbine_geo.iff",
+						"Geonosian Generic Carbine", "object/weapon/ranged/carbine/carbine_geo_generic.iff",
+						"SD Heroic Carbine", "object/weapon/ranged/carbine/carbine_heroic_sd.iff",
+						"Massassi Carbine", "object/weapon/ranged/carbine/carbine_kun_massassi.iff",
+						"Laser Static Carbine", "object/weapon/ranged/carbine/carbine_laser_static.iff",
+						"PvP Carbine", "object/weapon/ranged/carbine/carbine_pvp.iff",
+						"PvP NGANT Carbine", "object/weapon/ranged/carbine/carbine_pvp_ngant.iff",
+						"Rotary Underslung Carbine", "object/weapon/ranged/carbine/carbine_rotary_underslung.iff",
+						"Slug Carbine", "object/weapon/ranged/carbine/carbine_slug.iff",
+						"Special Ops Bothan Carbine", "object/weapon/ranged/carbine/carbine_specops_bothan_carbine.iff",
+						"Underslug Carbine", "object/weapon/ranged/carbine/carbine_underslung.iff",
+						"Wookiee Bowcaster Carbine", "object/weapon/ranged/carbine/ep3/carbine_wookiee_bowcaster.iff",
+						"Wookiee Bowcaster Generic Carbine", "object/weapon/ranged/carbine/ep3/carbine_wookiee_bowcaster_generic.iff",
 						"Proton Carbine", "object/weapon/ranged/carbine/carbine_proton.iff"
 					},
 					"Heavy",
@@ -2935,8 +3026,9 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					},
 					"Two-Handed",
 					{
-						"Obsidian Sword", "object/weapon/melee/2h_sword/som_2h_sword_obsidian.iff",
-						"Massassi Enforcer", "object/weapon/melee/2h_sword/2h_sword_kun_massassi.iff"
+						"Legendary Maul", "object/weapon/melee/2h_sword/2h_sword_maul_legendary.iff",
+						"Massassi Enforcer", "object/weapon/melee/2h_sword/2h_sword_kun_massassi.iff",
+						"Obsidian Sword", "object/weapon/melee/2h_sword/som_2h_sword_obsidian.iff"
 					},
 					"One-Handed",
 					{

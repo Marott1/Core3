@@ -46,3 +46,4 @@
 
 -- Server Objects
 includeFile("custom_content/intangible/vehicle/barc_speeder_pcd.lua")
+includeFile("custom_content/intangible/vehicle/republic_gunship_pcd.lua")

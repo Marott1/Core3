@@ -68,10 +68,8 @@
 
 #include "server/zone/packets/object/SitOnObject.h"
 
-#include "server/zone/packets/object/CombatSpam.h"
-
 #include "server/zone/managers/planet/PlanetManager.h"
-#include "server/zone/managers/terrain/TerrainManager.h"
+#include "terrain/manager/TerrainManager.h"
 #include "server/zone/managers/resource/resourcespawner/SampleTask.h"
 
 #include "templates/creature/SharedCreatureObjectTemplate.h"
@@ -2612,8 +2610,20 @@ void CreatureObjectImplementation::notifySelfPositionUpdate() {
 		if (planetManager != NULL) {
 			TerrainManager* terrainManager = planetManager->getTerrainManager();
 
-			if (terrainManager != NULL)
-				terrainManager->notifyPositionUpdate(asCreatureObject());
+			if (terrainManager != NULL) {
+				float waterHeight;
+				
+				Reference<CreatureObject*> creature = _this.getReferenceUnsafeStaticCast();
+				
+				if (creature->getParent() == NULL && terrainManager->getWaterHeight(creature->getPositionX(), creature->getPositionY(), waterHeight)) {
+					
+					if (creature->getPositionZ() + creature->getSwimHeight() - waterHeight < 0.2) {
+						
+						if (creature->hasState(CreatureState::ONFIRE))
+							creature->healDot(CreatureState::ONFIRE, 100);
+					}
+				}
+			}
 		}
 	}
 
@@ -2998,7 +3008,6 @@ bool CreatureObjectImplementation::isHealableBy(CreatureObject* object) {
 		return false;
 
 	PlayerObject* ghost = object->getPlayerObject(); // ghost is the healer
-	PlayerObject* targetGhost = getPlayerObject();
 
 	if (ghost == NULL)
 		return false;
@@ -3007,6 +3016,16 @@ bool CreatureObjectImplementation::isHealableBy(CreatureObject* object) {
 		return false;
 
 	//if ((pvpStatusBitmask & CreatureFlag::OVERT) && (object->getPvpStatusBitmask() & CreatureFlag::OVERT) && object->getFaction() != getFaction())
+
+	PlayerObject* targetGhost = getPlayerObject();
+
+	if (isPet()) {
+		ManagedReference<CreatureObject*> owner = getLinkedCreature().get();
+		if (owner != NULL)
+			targetGhost = owner->getPlayerObject();
+		else
+			targetGhost = NULL;
+	}
 
 	if (targetGhost == NULL)
 		return true;
