@@ -1,5 +1,5 @@
 world_boss_tatooine = Creature:new {
-	objectName = "@mob/creature_names:world_boss_tatooine",
+	customName = "Tatooine World Boss",
 	socialGroup = "tusken_raider",
 	faction = "tusken_raider",
 	level = 100,
